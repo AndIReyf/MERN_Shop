@@ -1,7 +1,9 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-const mongoose = require('mongoose')
+const connectDB = require('./config/db')
+
+connectDB()
 
 const app = express()
 app.use(cors())
