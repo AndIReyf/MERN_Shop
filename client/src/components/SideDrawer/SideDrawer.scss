@@ -1,0 +1,16 @@
+.sideDrawer {
+  width: 70%;
+  height: 100vh;
+  background-color: #171717;
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform .3s ease-out;
+
+  &.show {
+    box-shadow: 0 0 8px 1px #dd219e;
+    transform: translateX(0);
+  }
+}

@@ -1,12 +1,17 @@
 import {Switch, Route, Redirect} from 'react-router-dom'
 import './app.css'
 import {Cart, Home, Product} from "./pages"
-import {Navbar} from "./components/Navbar/Navbar";
+import {Navbar, Backdrop, SideDrawer} from "./components";
+import {useState} from "react";
 
 export const App = () => {
+    const [sideToggle, setSideToggle] = useState<boolean>(false)
+
     return (
         <>
-            <Navbar/>
+            <Navbar setSideToggle={setSideToggle} show={sideToggle}/>
+            {sideToggle && <Backdrop/>}
+            <SideDrawer show={sideToggle}/>
             <main>
                 <Switch>
                     <Route exact path='/' component={() => <Home/>}/>

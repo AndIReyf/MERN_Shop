@@ -1,31 +1,24 @@
-import {Link} from 'react-router-dom'
 import './Navbar.scss'
+import {Dispatch, SetStateAction} from "react";
+import {Links} from "./Links";
 
-export const Navbar = () => {
+export const Navbar = ({setSideToggle, show}: Props) => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
                 <h1>Shop</h1>
             </div>
-            <ul className="navbar__links">
-                <li>
-                    <Link to="/cart" className="navbar__cart">
-                        <i className="fas fa-shopping-cart"> </i>
-                        <span>Cart</span>
-                        <span className="cartLogo__badge">0</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/">
-                        Shop
-                    </Link>
-                </li>
-            </ul>
-            <ul className="ham__menu">
-                <li></li>
-                <li></li>
-                <li></li>
+            <Links/>
+            <ul className={`ham__menu ${show && 'show'}`} onClick={() => setSideToggle(prev => !prev)}>
+                <li> </li>
+                <li> </li>
+                <li> </li>
             </ul>
         </nav>
     )
+}
+
+type Props = {
+    setSideToggle: Dispatch<SetStateAction<boolean>>
+    show: boolean
 }
