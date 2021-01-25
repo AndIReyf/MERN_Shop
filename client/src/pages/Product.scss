@@ -1,0 +1,102 @@
+.productPage {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  &__left {
+    display: flex;
+    flex: .8;
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
+  }
+
+  .left__img {
+    margin: 1rem;
+    flex: .6;
+  }
+
+  .left__name {
+    color: #cfc3a5;
+  }
+
+  .left__price {
+    font-size: 1rem;
+  }
+
+  .left__description {
+    color: #302d2d;
+    line-height: 24px;
+  }
+
+  .left__info {
+    margin: 1rem;
+    flex: .4;
+    background-color: #fff;
+    height: fit-content;
+    font-size: .9rem;
+
+    & > * {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    & > *:last-child {
+      border: none;
+    }
+  }
+
+  &__right {
+    flex: .2;
+
+    @media (max-width: 960px) {
+      flex: 1;
+      padding: 1rem;
+    }
+  }
+
+  .right__info {
+    width: 250px;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+
+    @media (max-width: 960px) {
+      width: 100%;
+      margin: 0;
+    }
+
+    & > p {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .right__btn {
+    padding: 1rem;
+    text-align: center;
+
+    button {
+      background-color: #333333;
+      color: #cfc3a5;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+      transition: background-color .3s, color .3s;
+
+      &:hover {
+        background-color: #dd219e;
+        color: #f4f4f4;
+      }
+    }
+  }
+}

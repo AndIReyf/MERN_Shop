@@ -9,7 +9,7 @@ export const Product = () => {
             </div>
             <div className="product__info">
                 <h2 className="product__name">Canon 23</h2>
-                <p className="product__description">Sdwe ,w,wlkdemmfkjfhgwo hhehb qwjnd djjjjw owo wk kwSdwe ,w,wlkdemmfkjfhgwo hhehb qwjnd djjjjw owo wk kw</p>
+                <p className="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores cupiditate deleniti dolorem, enim fugiat illum incidunt modi natus praesentium quos sit veritatis voluptas. Accusamus obcaecati repellat sequi ullam veniam?</p>
                 <p className="product__price">499$</p>
                 <Link to={`/products/${11}`} className="info__btn">View</Link>
             </div>
