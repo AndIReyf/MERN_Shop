@@ -1,0 +1,49 @@
+.cart {
+
+  &__title {
+    padding: 1rem;
+    font-family: "Segoe Script", sans-serif;
+  }
+
+  &__right {
+    background-color: #fff;
+    margin: 0 1rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 420px) {
+      grid-template-columns: 1fr;
+    }
+
+    & > * {
+      padding: 1rem;
+    }
+  }
+
+  &__btn {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    @media (max-width: 420px) {
+      text-align: center;
+    }
+
+    button {
+      padding: 1rem;
+      font-size: 20px;
+      text-transform: uppercase;
+      background-color: #f4f4f4;
+      box-shadow: 0 0 3px #171717;
+      border-radius: 3px;
+      color: #dd219e;
+      transition: box-shadow .2s, transform .2s ease-out;
+
+      &:hover, &:focus, &:active {
+        box-shadow: 0 0 6px #171717;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

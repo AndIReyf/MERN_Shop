@@ -10,8 +10,8 @@ export const App = () => {
     return (
         <>
             <Navbar setSideToggle={setSideToggle} show={sideToggle}/>
-            {sideToggle && <Backdrop/>}
-            <SideDrawer show={sideToggle}/>
+            {sideToggle && <Backdrop setSideToggle={setSideToggle}/>}
+            <SideDrawer setSideToggle={setSideToggle} show={sideToggle}/>
             <main>
                 <Switch>
                     <Route exact path='/' component={() => <Home/>}/>

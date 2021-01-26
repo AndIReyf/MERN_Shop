@@ -1,9 +1,13 @@
 import {Link} from "react-router-dom"
 import './Links.scss'
+import {Dispatch, SetStateAction} from "react";
 
-export const Links = ({show}: Props) => {
+export const Links = ({show, setSideToggle}: Props) => {
+    const toggleHandler = () => {
+        setSideToggle && setSideToggle(prev => !prev)
+    }
     return (
-        <ul className={`navbar__links ${show && 'show'}`}>
+        <ul className={`navbar__links ${show && 'show'}`} onClick={toggleHandler}>
             <li>
                 <Link to="/cart" className="navbar__cart">
                     <i className="fas fa-shopping-cart"> </i>
@@ -13,7 +17,7 @@ export const Links = ({show}: Props) => {
             </li>
             <li>
                 <Link to="/">
-                    Shop
+                    Products
                 </Link>
             </li>
         </ul>
@@ -22,4 +26,5 @@ export const Links = ({show}: Props) => {
 
 type Props = {
     show?: boolean
+    setSideToggle?: Dispatch<SetStateAction<boolean>>
 }

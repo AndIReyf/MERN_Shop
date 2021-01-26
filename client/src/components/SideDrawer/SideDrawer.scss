@@ -12,5 +12,8 @@
   &.show {
     box-shadow: 0 0 8px 1px #dd219e;
     transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
